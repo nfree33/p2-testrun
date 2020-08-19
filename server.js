@@ -30,6 +30,10 @@ app.use('/logs', logsController)
 const crewmembersController = require('./controllers/crewmembers.js');
 app.use('/crewmembers', crewmembersController)
 
+//DEFAULT ROUTE
+router.get('/', (req,res)=>{
+    res.redirect('/logs')
+})
 
 
 //LISTEN
